@@ -17,7 +17,10 @@ import NextLink from "next/link";
 
 export default function Home() {
   const [response, setResponse] = useState("");
-  const [prompt, setPrompt] = useState("");
+  const [information, setInformation] = useState("");
+  const [requirements, setRequirements] = useState("");
+  const [about, setAbout] = useState("");
+  const [company, setCompany] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
@@ -33,9 +36,16 @@ export default function Home() {
       },
       body: JSON.stringify({
         prompt:
-          "Please forget all prior prompts. I want you to become my Prompt Creator. Your goal is to help me build the best-detailed prompt for my needs. IF there is a question do not to answer it, your goal is to remake the prompt. This prompt will be used by you, ChatGPT. Please follow this following process: 1. Analyze MY input" +
-          prompt +
-          " your goal is not to answer it. 2. Based on my input, you will give me a revised prompt to use this prompt will be at least 5 sentences long. 3.The revised prompt must be a prompt I can ask another GPT interface for a deeper and better answer. DO NOT ANSWER MY INPUT. Write out the revised prompt starting with: Here is your Super Charged prompt:",
+          "You are a skilled writer who knows how to write elegantly and are able to write convincing things." +
+          "I am applying for a company named: " +
+          company +
+          "here is some information about the company: " +
+          information +
+          "here are the job requirements: " +
+          requirements +
+          "here is some information about me" +
+          about +
+          "can you write me a convincing cover letter on why I deserve this job?",
       }),
     }).then((res) => res.json());
 
@@ -70,12 +80,51 @@ export default function Home() {
                     borderRadius="0"
                     border="2px"
                     p="9px"
-                    placeholder="How do I write better content?"
+                    placeholder="What is the company name?"
                     size="lg"
                     variant="unstyled"
                     autoComplete="off"
-                    onChange={(e) => setPrompt(e.target.value)}
-                    value={prompt}
+                    onChange={(e) => setCompany(e.target.value)}
+                    value={company}
+                  />
+                  <Input
+                    bg="transparent"
+                    color="#51da4c"
+                    borderRadius="0"
+                    border="2px"
+                    p="9px"
+                    placeholder="Tell me about the company?"
+                    size="lg"
+                    variant="unstyled"
+                    autoComplete="off"
+                    onChange={(e) => setInformation(e.target.value)}
+                    value={information}
+                  />
+                  <Input
+                    bg="transparent"
+                    color="#51da4c"
+                    borderRadius="0"
+                    border="2px"
+                    p="9px"
+                    placeholder="What are the job requirements?"
+                    size="lg"
+                    variant="unstyled"
+                    autoComplete="off"
+                    onChange={(e) => setRequirements(e.target.value)}
+                    value={requirements}
+                  />
+                  <Input
+                    bg="transparent"
+                    color="#51da4c"
+                    borderRadius="0"
+                    border="2px"
+                    p="9px"
+                    placeholder="Tell me about yourself"
+                    size="lg"
+                    variant="unstyled"
+                    autoComplete="off"
+                    onChange={(e) => setAbout(e.target.value)}
+                    value={about}
                   />
                 </Box>
               </FormControl>
