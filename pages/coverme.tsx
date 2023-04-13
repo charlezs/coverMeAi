@@ -56,8 +56,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Promptomize</title>
-        <meta name="description" content="Promptomize your prompts today!" />
+        <title>CoverMe</title>
+        <meta name="description" content="Create Cover Letters Fast!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Head>
         <title>CoverMe</title>
-        <meta name="description" content="Supercharge your prompts" />
+        <meta name="description" content="Create Cover Letters Faster." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
