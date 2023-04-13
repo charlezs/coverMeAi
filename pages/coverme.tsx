@@ -69,7 +69,7 @@ export default function Home() {
             gap="50px"
           >
             <Heading fontSize="40px" mt="10" color="white">
-              Hi, I'm CoverAi let us build your cover letter!
+              Hi, I am CoverAi lets build your cover letter!
             </Heading>
             <VStack w="100%">
               <FormControl id="prompt" fontSize={"2xl"} onSubmit={handleSubmit}>
