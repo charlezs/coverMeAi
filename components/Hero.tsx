@@ -21,7 +21,11 @@ export default function Hero() {
   }
   return (
     <>
-      <Container maxW="100%" backgroundColor="#89CFF0" h="85vh">
+      <Container
+        maxW="100%"
+        backgroundColor="#89CFF0"
+        h={{ base: "150vh", sm: "100vh", md: "85vh" }}
+      >
         <Stack
           direction={{ base: "column", sm: "column", md: "row" }}
           py="70px"

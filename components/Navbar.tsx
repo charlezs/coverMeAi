@@ -162,7 +162,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 
 const MobileNav = () => {
   return (
-    <Stack bg="white" p={4} display={{ md: "none" }}>
+    <Stack bg="#89CFF0" p={4} display={{ md: "none" }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
@@ -191,6 +191,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         {children && (
           <Icon
             as={ChevronDownIcon}
+            color="white"
             transition={"all .25s ease-in-out"}
             transform={isOpen ? "rotate(180deg)" : ""}
             w={6}
@@ -203,6 +204,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         <Stack
           mt={2}
           pl={4}
+          color="white"
           borderLeft={1}
           borderStyle={"solid"}
           borderColor={useColorModeValue("gray.200", "gray.700")}
@@ -247,8 +249,8 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Product",
     children: [
       {
-        label: "Promptimize",
-        href: "/promptomize",
+        label: "CoeverMe",
+        href: "/coverme",
       },
     ],
   },
